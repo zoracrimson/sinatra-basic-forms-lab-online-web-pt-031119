@@ -13,7 +13,7 @@ describe App do
     end
   end
 
-  describe 'GET /NEW' do 
+  describe 'GET /new' do 
     it 'sends a 200 status code' do
       get '/new'
       expect(last_response.status).to eq(200)
