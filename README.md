@@ -34,12 +34,15 @@ available for adoption. You can create this form in `views/create_puppy.erb`.
 Remember, you'll need to set up another controller action for a user to be
 able to view this form in the browser. The "submit" button
 of a form can be an `<input>` element with a `type` of `"submit"` (or a 
-`<button>` element with a `type` of `"submit`) — a plain old `<button>` won't do it. 
+`<button>` element with a `type` of `"submit`) — a plain old `<button>` 
+won't do it. If you want to change the text in the button, check out these docs:
+ * [MDN: Input — submit](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit)
+ * [MDN: Button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button)
 
 5. Now we need to make sure the form is being submitted properly. You'll need
 to have a third controller action that takes the input from the user and
 renders a third view (`views/display_puppy.erb`) which displays the info for
-the puppy that was just created.
+the puppy that was just created. Create an instance of a puppy to hold the data about the puppy you just created.
 
 6. Add a link on the homepage to the new puppy form.
 

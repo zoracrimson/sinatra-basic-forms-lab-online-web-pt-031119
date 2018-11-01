@@ -1,8 +1,21 @@
 describe 'Puppy class' do 
-  let!(:puppy) { Puppy.new("brad", "black lab", 2) }
+  let!(:puppy) { 
+    #arity is the number of arguments that a method accepts
+    arity = Puppy.instance_method(:initialize).arity
+    if arity == 1
+      # assuming you want to instantiate a puppy with a hash
+      Puppy.new(name: "brad", breed: "black lab", months_old: 2)
+    elsif arity == 3
+      # assuming you want to instantiate a puppy with three separate args
+      Puppy.new("brad", "black lab", 2)
+    else
+      # beyond that I can't help you
+      nil
+    end
+  }
 
   it 'can create a new instance of the puppy class' do
-    expect(Puppy.new("brad", "black lab", 2)).to be_an_instance_of(Puppy)
+    expect(puppy).to be_an_instance_of(Puppy)
   end
 
   it 'can read a puppy name' do 
@@ -13,13 +26,13 @@ describe 'Puppy class' do
     expect(puppy.breed).to eq("black lab")
   end
 
-  it 'can read a puppy age' do 
-    expect(puppy.age).to eq(2)
+  it 'can read a puppy age (puppy#months_old)' do 
+    expect(puppy.months_old).to eq(2)
   end
 
-  it 'can change puppy age' do 
-    puppy.age = 3
-    expect(puppy.age).to eq(3)
+  it 'can change puppy age (puppy#months_old=)' do 
+    puppy.months_old = 3
+    expect(puppy.months_old).to eq(3)
   end
 
   it 'can change puppy name' do 
