@@ -1,5 +1,3 @@
-
-
 describe App do
 
   describe 'GET /' do
