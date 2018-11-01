@@ -26,9 +26,5 @@ describe 'Puppy class' do
     puppy.name = "brad the beast"
     expect(puppy.name).to eq("brad the beast")
   end
-
-  it 'can change puppy breed' do 
-    puppy.breed = "the best black lab"
-    expect(puppy.breed).to eq("the best black lab")
-  end
+  
 end
