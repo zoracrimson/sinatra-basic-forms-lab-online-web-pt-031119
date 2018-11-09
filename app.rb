@@ -2,8 +2,6 @@ require_relative 'config/environment'
 
 class App < Sinatra::Base
 
-<<<<<<< HEAD
-=======
   get '/' do
     erb :index
   end
@@ -17,5 +15,5 @@ class App < Sinatra::Base
     erb :display_puppy
   end
 
->>>>>>> actually use puppy instance
+
 end
