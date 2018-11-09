@@ -21,7 +21,7 @@ submission, view the puppy's information.
 
 1. Build out a puppy class in `models/puppy.rb`. Puppies should have name,
 breed, and age attributes. You will need to be able to pass these three
-attributes to initialization, as well as readers and writers for the attributes.
+attributes to initialization, as well as readers or accessors for the attributes.
 
 2. In `app.rb` build out a GET request to load a homepage. The homepage
 should go to the main route `/`. 
@@ -32,14 +32,17 @@ welcome you to the Puppy Adoption Site. Add this view to the controller action.
 4. Now, we need to create a form for a user to list a new puppy that is
 available for adoption. You can create this form in `views/create_puppy.erb`.
 Remember, you'll need to set up another controller action for a user to be
-able to view this form in the browser. Another reminder: the "submit" button
-of a form is an `<input>` element with a `type` of `"submit"`, *not* a 
-`<button>` element. 
+able to view this form in the browser. The "submit" button
+of a form can be an `<input>` element with a `type` of `"submit"` (or a 
+`<button>` element with a `type` of `"submit`) — a plain old `<button>` 
+won't do it. If you want to change the text in the button, check out these docs:
+ * [MDN: Input — submit](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit)
+ * [MDN: Button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button)
 
 5. Now we need to make sure the form is being submitted properly. You'll need
 to have a third controller action that takes the input from the user and
 renders a third view (`views/display_puppy.erb`) which displays the info for
-the puppy that was just created.
+the puppy that was just created. Create an instance of a puppy to hold the data about the puppy you just created.
 
 6. Add a link on the homepage to the new puppy form.
 
