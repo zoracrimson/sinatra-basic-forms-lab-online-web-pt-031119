@@ -83,5 +83,4 @@ describe App do
       expect(page).to have_text(/Age:\s+9 months/i)
     end
   end
-
 end
