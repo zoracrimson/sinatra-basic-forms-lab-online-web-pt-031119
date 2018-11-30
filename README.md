@@ -47,3 +47,4 @@ the puppy that was just created. Create an instance of a puppy to hold the data 
 6. Add a link on the homepage to the new puppy form.
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/sinatra-basic-forms-lab'>Sinatra Basic Forms Lab</a> on Learn.co and start learning to code for free.</p>
+
