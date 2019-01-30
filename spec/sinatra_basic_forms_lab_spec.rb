@@ -8,14 +8,14 @@ describe App do
       expect(last_response.status).to eq(200)
     end
 
-    it 'has a link with the text "List a Puppy"' do
+    it 'has a link with the text "List A Puppy"' do
       visit '/'
-      expect(page).to have_link("List a Puppy")
+      expect(page).to have_link("List A Puppy")
     end
 
     it 'has a link to list a puppy that links to /new' do
       visit '/'
-      expect(page).to have_link("List a Puppy", href: '/new')
+      expect(page).to have_link("List A Puppy", href: '/new')
     end
   end
 
@@ -83,4 +83,5 @@ describe App do
       expect(page).to have_text(/Age:\s+9 months/i)
     end
   end
+
 end
